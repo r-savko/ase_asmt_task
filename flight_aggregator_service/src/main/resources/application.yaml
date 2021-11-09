@@ -1,0 +1,10 @@
+server:
+  port: 5000
+  error:
+    include-message: always
+
+spring:
+  datasource:
+    url : jdbc:postgresql://qa-test-database.c9sk8hydz12p.eu-central-1.rds.amazonaws.com:5432/postgres
+    username: postgres
+    password: rootroot
