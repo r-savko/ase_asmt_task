@@ -18,7 +18,6 @@ public class AppConfiguration {
     @Bean
     public AmazonSQS amazonSQS() {
         return AmazonSQSClientBuilder.defaultClient();
-
     }
 
 }

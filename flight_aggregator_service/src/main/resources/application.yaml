@@ -1,18 +1,8 @@
-server:
-  port: 5000
-  error:
-    include-message: always
-
-spring:
-  jpa:
-    generate-ddl: true
-    hibernate:
-      ddl-auto: update
-  datasource:
-    url: jdbc:postgresql://qa-test-database.c9sk8hydz12p.eu-central-1.rds.amazonaws.com:5432/postgres
-    username: postgres
-    password: rootroot
-
 route:
   queue:
     url: https://sqs.eu-central-1.amazonaws.com/423073966355/flight_routes_queue
+  providers:
+    ase:
+      urls: >
+        http://ase.asmt.live:8000/provider/flights1,
+        http://ase.asmt.live:8000/provider/flights2

@@ -10,8 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class QueueFlightRouteSender implements FlightRouteSender {
 
-    final
-    AmazonSQS amazonSQS;
+    private final AmazonSQS amazonSQS;
     private final Gson gson;
     @Value("${route.queue.url}")
     private String queueUrl;

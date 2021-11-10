@@ -1,24 +1,10 @@
 package com.funwithflights.service;
 
-import com.funwithflights.repository.FlightRouteRepository;
-import com.funwithflights.repository.model.FlightRoute;
-import org.springframework.stereotype.Component;
+import com.funwithflights.model.FlightRoute;
+import java.util.List;
 
-@Component
-public class FlightRouteService {
+public interface FlightRouteService {
 
-    private final FlightRouteRepository repository;
-
-    public FlightRouteService(FlightRouteRepository repository) {
-        this.repository = repository;
-    }
-
-    public Iterable<FlightRoute> fetchAllFlightRoutes() {
-        return repository.findAll();
-    }
-
-    public void addFlightRoute(FlightRoute flightRoute) {
-        repository.save(flightRoute);
-    }
+    List<FlightRoute> retrieveRoutes();
 
 }

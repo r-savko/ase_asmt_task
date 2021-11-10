@@ -19,26 +19,6 @@
     <java.version>11</java.version>
   </properties>
 
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <configuration>
-              <mainClass>
-                com.example.rest.api.Application
-              </mainClass>
-            </configuration>
-            <goals>
-              <goal>repackage</goal>
-            </goals>
-          </execution>
-        </executions>
-        <groupId>org.springframework.boot</groupId>
-      </plugin>
-    </plugins>
-  </build>
   <dependencies>
     <dependency>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -50,10 +30,9 @@
       <version>1.5.11</version>
     </dependency>
     <dependency>
-      <artifactId>amazon-sqs-java-messaging-lib</artifactId>
+      <artifactId>aws-java-sdk</artifactId>
       <groupId>com.amazonaws</groupId>
-      <type>jar</type>
-      <version>1.0.8</version>
+      <version>1.12.106</version>
     </dependency>
     <dependency>
       <artifactId>spring-boot-configuration-processor</artifactId>
@@ -71,11 +50,35 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <artifactId>spring-cloud-aws-messaging</artifactId>
-      <groupId>org.springframework.cloud</groupId>
-      <version>2.2.6.RELEASE</version>
+      <artifactId>spring-data-jpa</artifactId>
+      <groupId>org.springframework.data</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <groupId>org.springframework.boot</groupId>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <configuration>
+              <mainClass>
+                com.funwithflights.Application
+              </mainClass>
+            </configuration>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+        <groupId>org.springframework.boot</groupId>
+      </plugin>
+    </plugins>
+  </build>
 
 
 </project>
