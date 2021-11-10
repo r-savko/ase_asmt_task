@@ -2,7 +2,7 @@ package com.funwithflights.messaging;
 
 import com.funwithflights.model.FlightRoute;
 
-public interface SendFlightRouteService {
+public interface FlightRouteSender {
 
     void send(FlightRoute flightRoute);
 

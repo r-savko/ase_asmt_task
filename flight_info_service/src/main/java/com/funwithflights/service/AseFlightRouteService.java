@@ -12,10 +12,9 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class AseFlightRouteService implements FlightRouteService {
 
+    final RestTemplate restTemplate;
     @Value("${route.providers.ase.urls}")
     private String[] routUrls;
-
-    final RestTemplate restTemplate;
 
     public AseFlightRouteService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;

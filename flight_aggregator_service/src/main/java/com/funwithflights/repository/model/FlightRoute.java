@@ -8,15 +8,16 @@ import javax.persistence.Id;
 @Entity
 public class FlightRoute {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
     String airline;
     String sourceAirport;
     String destinationAirport;
     String codeShare;
     Integer stops;
     String equipment;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     public Long getId() {
         return id;
